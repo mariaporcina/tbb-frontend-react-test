@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import products from '../products.json';
 
-function Filter() {
+function Filter({ handleChangeEvent }) {
     const [productsList, setProducts] = useState(products.data.nodes);
     const [categories, setCategories] = useState([]);
 
@@ -27,7 +27,8 @@ function Filter() {
     }
 
     return (
-        <select name="categories">
+        <select name="categories" onChange={ handleChangeEvent }>
+            <option value="Todas">Todas</option>
             { options }
         </select>
     );
