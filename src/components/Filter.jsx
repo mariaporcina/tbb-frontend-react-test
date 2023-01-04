@@ -1,22 +1,14 @@
 import { useState, useEffect } from "react";
 
+import getCategories from "../helpers/categoriesHelper";
+
 function Filter({ productsList, handleChangeEvent }) {
     const [categories, setCategories] = useState([]);
 
-    const getCategories = () => {
-        const allCategories = [];
-
-        productsList.forEach((product)=>{
-            const categoryId = product.category._id;
-            const categoryName = product.category.name; 
-        
-            allCategories[categoryId] = categoryName;
-        });
-
+    useEffect(() => {
+        const allCategories = getCategories(productsList);
         setCategories(allCategories);
-    }
-
-    useEffect(getCategories, []);
+    }, []);
 
     const options = [];
     for(const category in categories) {
