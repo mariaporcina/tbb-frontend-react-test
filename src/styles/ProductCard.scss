@@ -1,0 +1,67 @@
+.ProductList__card {
+    flex-basis: 48%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    min-height: 270px;
+    margin: 0 0 12px;
+    box-shadow: 0 0 20px -19px #4a4a4a;
+
+    h2 {
+        font-size: 0.9rem;
+
+        @media screen and (min-width: 425px) {
+            font-size: 1rem;
+        }
+        @media screen and (min-width: 768px) {
+            font-size: 1.2rem;
+        }
+        @media screen and (min-width: 1440px) {
+            font-size: 1.3rem;
+            margin: 12px 0 0;
+        }
+    }
+
+    h3 {
+        font-weight: 500;
+        font-size: 0.8rem;
+        color: #214cba;
+        margin: 4px 0 2px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 0.9rem;
+        }
+        @media screen and (min-width: 1440px) {
+            font-size: 0.9rem;
+            margin: 10px 0 4px;
+        }
+    }
+
+    p {
+        font-size: 0.7rem;
+
+        @media screen and (min-width: 425px) {
+            font-size: 0.8rem;
+        }
+        @media screen and (min-width: 768px) {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media screen and (min-width: 425px) {
+        min-height: 316px;
+    }
+    @media screen and (min-width: 768px) {
+        flex-basis: 32%;
+        min-height: 382px;
+    }
+    @media screen and (min-width: 1024px) {
+        flex-basis: 24%;
+    }
+    @media screen and (min-width: 1440px) {
+        flex-basis: 23%;
+        margin: 0 0 32px;
+        padding: 22px;
+        min-height: 436px;
+    }
+}

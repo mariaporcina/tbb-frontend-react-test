@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
 
-import products from '../products.json';
-
-function Filter({ handleChangeEvent }) {
-    const [productsList, setProducts] = useState(products.data.nodes);
+function Filter({ productsList, handleChangeEvent }) {
     const [categories, setCategories] = useState([]);
 
     const getCategories = () => {

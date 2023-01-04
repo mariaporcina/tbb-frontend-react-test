@@ -1,0 +1,52 @@
+.AppHeader {
+  padding: 20px 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    line-height: 30px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.8rem;
+    }
+    @media screen and (min-width: 1440px) {
+      font-size: 2rem;
+    }
+  }
+
+  select {
+    outline-color: #6a85b4;
+    border: 1px solid #666666;
+    border-radius: 3px;
+    padding: 6px 2px;
+
+    @media screen and (min-width: 768px) {
+      border-radius: 4px;
+      padding: 8px 8px;
+      width: 170px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 30px 0 40px;
+  }
+}
+
+.AppFooter {
+  text-align: center;
+  padding: 10px 0;
+
+  p {
+    font-size: 0.7rem;
+    font-weight: 500;
+  
+    @media screen and (min-width: 768px) {
+      font-size: 0.8rem;
+    }
+  }
+}

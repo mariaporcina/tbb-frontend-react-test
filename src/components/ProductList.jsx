@@ -1,25 +1,12 @@
-import { useState } from "react";
-
-import products from '../products.json';
-import Filter from "./Filter";
 import ProductCard from './ProductCard';
 
-function ProductList() {
-    const [productsList, setProducts] = useState(products.data.nodes);
-    const [filteredProducts, setFilteredProducts] = useState([]);
+import '../styles/ProductList.scss'
 
-    const filterProducts = (event) => {
-        const selectedcategory = event.target.selectedOptions[0].value;
-        const filteredProducts = productsList.filter(product => product.category.name === selectedcategory);
-
-        setFilteredProducts(filteredProducts);
-    }
-
+function ProductList({ productsList, filteredProducts }) {
     if(filteredProducts.length > 0) {
         return (
             <div>
-                <Filter handleChangeEvent={ filterProducts } />
-                <ul>
+                <ul className="ProductList">
                     { filteredProducts.map( item => {
                         return <ProductCard key={ item.id } product={ item } />;
                     }) }
@@ -29,8 +16,7 @@ function ProductList() {
     } else {
         return (
             <div>
-                <Filter handleChangeEvent={ filterProducts } />
-                <ul>
+                <ul className="ProductList">
                     { productsList.map( item => {
                         return <ProductCard key={ item.id } product={ item } />;
                     }) }
